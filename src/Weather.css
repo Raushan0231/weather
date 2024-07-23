@@ -1,0 +1,93 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Arial", sans-serif;
+  color: white;
+  transition: background-color 0.5s ease;
+}
+
+.weather-app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  transition: background-color 0.5s ease;
+}
+
+.search-bar {
+  width: 100%;
+  max-width: 600px;
+  margin: 20px 0;
+}
+
+.search-bar input {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+}
+
+.location-box {
+  text-align: center;
+  margin: 30px 0;
+}
+
+.location {
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.date {
+  font-size: 20px;
+  font-weight: 300;
+}
+
+.weather-box {
+  text-align: center;
+}
+
+.temp {
+  font-size: 64px;
+  font-weight: bold;
+}
+
+.weather {
+  font-size: 32px;
+  font-weight: 300;
+}
+
+.bg-cold {
+  background: linear-gradient(
+    to top,
+    #00c6ff,
+    #0072ff
+  ); /* cold weather gradient */
+}
+
+.bg-cool {
+  background: linear-gradient(
+    to top,
+    #2193b0,
+    #6dd5ed
+  ); /* cool weather gradient */
+}
+
+.bg-warm {
+  background: linear-gradient(
+    to top,
+    #ffafbd,
+    #ffc3a0
+  ); /* warm weather gradient */
+}
+
+.bg-hot {
+  background: linear-gradient(
+    to top,
+    #ff9966,
+    #ff5e62
+  ); /* hot weather gradient */
+}
