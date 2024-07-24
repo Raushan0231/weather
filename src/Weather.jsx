@@ -92,11 +92,7 @@ const Weather = () => {
             </div>
           </div>
         ) : (
-          <div className="no-data">
-            <p>
-              Weather data is currently unavailable. Please try again later.
-            </p>
-          </div>
+          "loading..."
         )}
       </main>
     </div>
