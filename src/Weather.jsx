@@ -64,7 +64,7 @@ const Weather = () => {
       className={`weather-app ${
         typeof weather.main != "undefined"
           ? getBackgroundClass(weather.main.temp)
-          : ""
+          : "bg-"
       }`}
     >
       <main>
@@ -92,7 +92,11 @@ const Weather = () => {
             </div>
           </div>
         ) : (
-          ""
+          <div className="no-data">
+            <p>
+              Weather data is currently unavailable. Please try again later.
+            </p>
+          </div>
         )}
       </main>
     </div>
