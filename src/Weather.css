@@ -91,3 +91,22 @@ body {
     #ff5e62
   ); /* hot weather gradient */
 }
+.no-data {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Full viewport height */
+  text-align: center;
+  font-size: 1.5rem; /* Increase font size for better readability */
+  color: #555; /* A softer color for the text */
+  background-color: #f0f0f0; /* Light grey background */
+}
+
+.no-data p {
+  margin: 0;
+  padding: 20px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
