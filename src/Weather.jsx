@@ -9,6 +9,7 @@ const api = {
 const Weather = () => {
   const [query, setQuery] = useState("");
   const [weather, setWeather] = useState({});
+
   const search = (evt) => {
     if (evt.key === "Enter") {
       fetch(`${api.base}weather?q=${query}&units=metric&APPID=${api.key}`)
@@ -20,6 +21,7 @@ const Weather = () => {
         });
     }
   };
+
   const dateBuilder = (d) => {
     let months = [
       "January",
@@ -64,15 +66,15 @@ const Weather = () => {
       className={`weather-app ${
         typeof weather.main != "undefined"
           ? getBackgroundClass(weather.main.temp)
-          : "bg-"
+          : ""
       }`}
     >
       <main>
-        <div className="search-bar">
+        <div className="search-bar-container">
           <input
             type="text"
             className="search-bar"
-            placeholder="search..."
+            placeholder="Search..."
             value={query}
             onChange={(e) => setQuery(e.target.value)}
             onKeyPress={search}
@@ -82,7 +84,7 @@ const Weather = () => {
           <div>
             <div className="location-box">
               <div className="location">
-                {weather.name},{weather.sys.country}
+                {weather.name}, {weather.sys.country}
               </div>
               <div className="date">{dateBuilder(new Date())}</div>
             </div>
