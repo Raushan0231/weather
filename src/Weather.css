@@ -1,80 +1,56 @@
-/* Weather.css */
+/* General Styles */
 body {
   margin: 0;
   padding: 0;
   font-family: Arial, sans-serif;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-image: url("https://images.unsplash.com/photo-1561484930-974554019ade?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fHdlYXRoZXIlMjBhcHB8ZW58MHx8MHx8fDA%3D"); /* Random weather image from Unsplash */
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
 }
 
 .weather-app {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-align: center;
-  color: white;
-  padding: 20px;
-  border-radius: 10px;
-  width: 350px;
-  background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
-  transition: background-color 0.5s ease;
+  transition: background-image 0.5s ease-in-out;
 }
 
-.bg-cold {
-  background: linear-gradient(to right, #00c6ff, #0072ff);
-}
-
-.bg-cool {
-  background: linear-gradient(to right, #6dd5fa, #2980b9);
-}
-
-.bg-warm {
-  background: linear-gradient(to right, #fbc2eb, #a6c1ee);
-}
-
-.bg-hot {
-  background: linear-gradient(to right, #ff9966, #ff5e62);
-}
-
+/* Search Bar Styles */
 .search-bar-container {
+  margin: 20px;
+}
+
+.search-bar {
   width: 100%;
-  margin-bottom: 20px;
+  max-width: 400px;
+  margin: auto;
 }
 
-.search-bar input {
-  width: 100%;
-  padding: 10px;
-  border: none;
-  border-radius: 5px;
-  font-size: 16px;
+/* Weather Details Styles */
+.weather-details {
+  color: #333;
 }
 
-.location-box {
-  margin-bottom: 20px;
+.weather-details img {
+  width: 120px;
+  height: 120px;
+  margin-top: 20px;
 }
 
-.location {
-  font-size: 32px;
-  font-weight: bold;
-}
+/* Responsive Design */
+@media (max-width: 600px) {
+  .weather-app {
+    padding: 20px;
+  }
 
-.date {
-  font-size: 20px;
-  font-weight: 300;
-}
+  .search-bar-container {
+    margin: 10px;
+  }
 
-.weather-box {
-  font-size: 42px;
-  font-weight: bold;
-}
+  .search-bar {
+    max-width: 100%;
+  }
 
-.weather-box .temp {
-  margin-bottom: 10px;
-}
-
-.weather-box .weather {
-  font-size: 24px;
+  .weather-details img {
+    width: 100px;
+    height: 100px;
+  }
 }
